@@ -8,50 +8,48 @@
     <title>Document</title>
 </head>
 <body>
-
-    <h1>Programacion Asincrona</h1>
-    <p>
-        En la programacion "normal" o mejor dicho sincrona, las tareas que se enlistan en
-        el codigo se realizan una despues de la otra, lo cual puede ser poco eficiente si
-        una o varias de las tareas son lentas (como trabajar con algun documento pesado 
-        o bien pedir documentos de una fuente externa), ya que el resto del programa 
-        tiene que esperar a que estas se terminen de realizar para continuar.
-    </p>
-    <p>
-        Esto se resuelve con la programacion asincrona, que en pocas palabras es realizar 
-        esas tareas lentas mientras se realizan las demas de manera separada, por lo
-        que no "estorba" en el flujo de carga del resto del documento. Una vez que 
-        dicha tarea lenta es terminada se incorpora al resto.
-    </p>
-    <p>
-        Una manera de hacer programacion asincrona es mediante funciones callback que 
-        son funciones que se dan como argumentos en la funcion original, y que cuando esta
-        ultima termina sus acciones son llamadas. Ya que cada vez que se llama un callback 
-        te "transportas" a esa funcion, el trabajar con varios callbacks "anidados" en un mismo 
-        programa puede resultar confuso.
-    <p>
-        Las promesas son otra forma de realizar acciones asincronas. Estas se asignan a una
-        variable la cual puede ser incluida en el flujo normal del codigo por lo que no 
-        lo interrumpe. Mientras que la accion de dicha promesa se realiza para devolver un 
-        valor, mismo que se avisa cuando esta disponible para la parte del codigo que lo 
-        requiera. Las promesas cuentan con un metodo "then" que hace la funcion de un callback, 
-        pero que facilitan el uso de varios en un mismo programa ya que se colocan uno despues 
-        de otro y no anidados como los callbacks 
-    </p>
-    <p>
-        Otro beneficio que tiene el uso de promesas es el metodo catch, con el cual puedes 
-        anticipar un error (normalmente es que la promesa no regrese un valor esperado) y hacer
-        que regrese un resultado (normalmente un mensaje), pero lo mas importante, evitar que 
-        pare el programa. 
-    </p>
-    <p>Existe una forma de utilizar promesas con una sintaxis similar a la sincrona y es mediante 
-        async await, que se aplica al declarar que una funcion es de tipo async al escribir async
-        antes de la misma, esto hace que la funcion realice una promesa. Y await pausa la ejecucion
-        de la funcion mientras espera la resolucion de la promesa pasada, y cuando la 
-        recibe reanuda la funcion. 
-    </p>
-
-
+  <h1>Programacion Asincrona</h1>
+  <p>
+    En la programacion "normal" o mejor dicho sincrona, las tareas que se enlistan en
+    el codigo se realizan una despues de la otra, lo cual puede ser poco eficiente si
+    una o varias de las tareas son lentas (como trabajar con algun documento pesado 
+    o bien pedir documentos de una fuente externa), ya que el resto del programa 
+    tiene que esperar a que estas se terminen de realizar para continuar.
+  </p>
+  <p>
+    Esto se resuelve con la programacion asincrona, que en pocas palabras es realizar 
+    esas tareas lentas mientras se realizan las demas de manera separada, por lo
+    que no "estorba" en el flujo de carga del resto del documento. Una vez que 
+    dicha tarea lenta es terminada se incorpora al resto.
+  </p>
+  <p>
+    Una manera de hacer programacion asincrona es mediante funciones callback que 
+    son funciones que se dan como argumentos en la funcion original, y que cuando esta
+    ultima termina sus acciones son llamadas. Ya que cada vez que se llama un callback 
+    te "transportas" a esa funcion, el trabajar con varios callbacks "anidados" en un mismo 
+    programa puede resultar confuso.
+  <p>
+    Las promesas son otra forma de realizar acciones asincronas. Estas se asignan a una
+    variable la cual puede ser incluida en el flujo normal del codigo por lo que no 
+    lo interrumpe. Mientras que la accion de dicha promesa se realiza para devolver un 
+    valor, mismo que se avisa cuando esta disponible para la parte del codigo que lo 
+    requiera. Las promesas cuentan con un metodo "then" que hace la funcion de un callback, 
+    pero que facilitan el uso de varios en un mismo programa ya que se colocan uno despues 
+    de otro y no anidados como los callbacks 
+  </p>
+  <p>
+    Otro beneficio que tiene el uso de promesas es el metodo catch, con el cual puedes 
+    anticipar un error (normalmente es que la promesa no regrese un valor esperado) y hacer
+    que regrese un resultado (normalmente un mensaje), pero lo mas importante, evitar que 
+    pare el programa. 
+  </p>
+  <p>
+    Existe una forma de utilizar promesas con una sintaxis similar a la sincrona y es mediante 
+    async await, que se aplica al declarar que una funcion es de tipo async al escribir async
+    antes de la misma, esto hace que la funcion realice una promesa. Y await pausa la ejecucion
+    de la funcion mientras espera la resolucion de la promesa pasada, y cuando la 
+    recibe reanuda la funcion. 
+  </p>
     <script src="ej-cap11.js"></script>
 </body>
 </html>
